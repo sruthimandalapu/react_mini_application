@@ -13,3 +13,5 @@ Run the following:
 1. npm install --save-dev gh-pages
 2. npm run deploy
 
+Deployed URL: https://sruthimandalapu.github.io/react_mini_application
+
