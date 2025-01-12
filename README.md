@@ -19,4 +19,5 @@ Run the following:
 2. npm run deploy
 
 Deployed URL: https://sruthimandalapu.github.io/react_mini_application
+for Sorting - please click on column name - it displays in ascending and descending order
 
