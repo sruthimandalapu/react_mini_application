@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_mini_application/static/css/main.31bc65e7.css",
+    "main.js": "/react_mini_application/static/js/main.fce100de.js",
+    "static/js/488.861b3857.chunk.js": "/react_mini_application/static/js/488.861b3857.chunk.js",
+    "index.html": "/react_mini_application/index.html",
+    "main.31bc65e7.css.map": "/react_mini_application/static/css/main.31bc65e7.css.map",
+    "main.fce100de.js.map": "/react_mini_application/static/js/main.fce100de.js.map",
+    "488.861b3857.chunk.js.map": "/react_mini_application/static/js/488.861b3857.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31bc65e7.css",
+    "static/js/main.fce100de.js"
+  ]
+}
