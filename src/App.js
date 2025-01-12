@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
- 
 
 function App() {
   const [data, setData] = useState([]);
@@ -79,21 +78,16 @@ function App() {
   /* ----------------------------- UI Part ------------------------------------------------- */
   return (
 
-    <div className="flex items-center justify-center bg-gray-100 min-h-screen">
+    <div className="min-h-screen bg-gray-100 p-6">
 
-      <header className="max-w-6xl mx-auto">
-        <h1 className="text-2xl font-bold text-center text-black-700 mb-6">
-          Financial Data Table
-        </h1>
-
-        {/* ------------------------------- Filters ----------------------------------------- */}
+      {/* ------------------------------------ Filter --------------------------------------- */}
         <div className="bg-white p-4 rounded-lg shadow mb-6">
-          <h2 className="text-xl font-semibold mb-4">Filters</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Date Range:
-              </label>
+        <h2 className="text-xl font-semibold mb-4">Filters</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* ------------------------- Date Range Filter -------------------------------*/}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Date Range:</label>
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="number"
                 className="w-full border border-gray-300 p-2 rounded"
@@ -105,7 +99,7 @@ function App() {
               />
               <input
                 type="number"
-                className="w-full border border-gray-300 p-2 mt-2 rounded"
+                className="w-full border border-gray-300 p-2 rounded"
                 placeholder="End Year"
                 value={dateRange.end}
                 onChange={(e) =>
@@ -113,10 +107,11 @@ function App() {
                 }
               />
             </div>
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Revenue Range:
-              </label>
+          </div>
+          {/* ---------------------------------- Revenue Range Filter ------------------------------- */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Revenue Range:</label>
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="number"
                 className="w-full border border-gray-300 p-2 rounded"
@@ -128,7 +123,7 @@ function App() {
               />
               <input
                 type="number"
-                className="w-full border border-gray-300 p-2 mt-2 rounded"
+                className="w-full border border-gray-300 p-2 rounded"
                 placeholder="Max Revenue"
                 value={revenueRange.max}
                 onChange={(e) =>
@@ -136,10 +131,11 @@ function App() {
                 }
               />
             </div>
-            <div>
-              <label className="block text-gray-700 font-medium mb-1">
-                Net Income Range:
-              </label>
+          </div>
+          {/* --------------------------------- Net Income Range Filter ---------------------------- */}
+          <div>
+            <label className="block text-gray-700 font-medium mb-1">Net Income Range:</label>
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="number"
                 className="w-full border border-gray-300 p-2 rounded"
@@ -151,7 +147,7 @@ function App() {
               />
               <input
                 type="number"
-                className="w-full border border-gray-300 p-2 mt-2 rounded"
+                className="w-full border border-gray-300 p-2 rounded"
                 placeholder="Max Net Income"
                 value={netIncomeRange.max}
                 onChange={(e) =>
@@ -161,6 +157,7 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
 
         {/* -------------------------------------- Table -------------------------------- */}
         <div className="overflow-x-auto bg-white p-4 rounded-lg shadow">
@@ -204,9 +201,7 @@ function App() {
             </tbody>
           </table>
         </div>
-      </header>
     </div>
   );
 }
-
 export default App;
